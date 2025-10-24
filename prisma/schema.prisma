@@ -1,0 +1,52 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Example {
+  id              Int      @id @default(autoincrement())
+  email           String   @unique
+  firstName       String   @map("first_name")
+  lastName        String   @map("last_name")
+  documentNumber  String   @map("document_number")
+
+  @@map("example")
+}
+
+model Measurement {
+  id               Int      @id @default(autoincrement())
+  unitOfMeasure    String   @map("unit_of_measure")
+  gross            Float    @map("gross")
+  net              Float    @map("net")
+  tare             Float    @map("tare")
+  weightStable     Boolean  @map("weight_stable")
+  centerOfZero     Boolean  @map("center_of_zero")
+  overload         Boolean  @map("overload")
+  underload        Boolean  @map("underload")
+  tareMode         Int      @map("tare_mode")
+  createdAt        DateTime @default(now()) @map("created_at")
+
+  @@map("measurement")
+}
+
+model DeviceComponent {
+  id                   Int      @id @default(autoincrement())
+  deviceClass          String   @map("device_class")
+  manufacturer         String   @map("manufacturer")
+  model                String   @map("model")
+  serialNumber         String   @map("serial_number")
+  softwareRevision     String   @map("software_revision")
+  scaleType            String   @map("scale_type")
+  capacity             String   @map("capacity")
+  increment            String   @map("increment")
+  geoCode              Int      @map("geo_code")
+  filterEnvironment    String   @map("filter_environment")
+  filterLimitFrequency String   @map("filter_limit_frequency")
+  createdAt            DateTime @default(now()) @map("created_at")
+
+  @@map("device_component")
+}
