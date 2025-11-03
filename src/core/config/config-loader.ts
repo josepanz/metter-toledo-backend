@@ -1,4 +1,7 @@
 import { registerAs } from '@nestjs/config';
+import * as path from 'path';
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const pkg = require(path.join(process.cwd(), 'package.json'));
 
 export const APP_CONFIG = registerAs('config', () => {
   return {
@@ -12,8 +15,9 @@ export const APP_CONFIG = registerAs('config', () => {
       seqEnabled: process.env.SEQ_ENABLED === 'true',
     },
     project: {
-      name: process.env.PROJECT_NAME,
-      description: process.env.PROJECT_DESCRIPTION,
+      name: process.env.PROJECT_NAME ?? pkg?.name,
+      description: process.env.PROJECT_DESCRIPTION ?? pkg?.description,
+      version: pkg?.version ?? '1',
     },
     metterToledo: {
       baseUrl: process.env.METTER_TOLEDO_BASE_URL,
