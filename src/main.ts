@@ -44,8 +44,8 @@ async function bootstrap() {
   const config: ConfigType<AppConfigType> = app.get(APP_CONFIG.KEY);
 
   const swaggerConfig = new DocumentBuilder()
-    .setTitle(config.project.name!)
-    .setDescription(config.project.description!)
+    .setTitle(config.project.name)
+    .setDescription(config.project.description)
     .setVersion(packageJson.version)
     .build();
 
