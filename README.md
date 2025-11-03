@@ -1,6 +1,7 @@
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
+
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
@@ -19,6 +20,13 @@
 </p>
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+<p align="center"><span><b>Autor:</b> Jose Panza (PanzerPy)</span></p>
+
+<p align="center"><span><b>Github:</b> <a href="https://github.com/josepanz">https://github.com/josepanz</a></span></p>
+
+<p align="center"><span><b>Contact:</b> <a href="mail.to:josepanza1@gmail.com">josepanza1@gmail.com</a></span></p>
+
+<p align="center"><span><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/jose-panza/">Jose Panza</a></span></p>
 
 # <p> <span align="rigth"><a href="https://www.mt.com/py/es/home.html" target="blank"><img src="https://www.mt.com//etc.clientlibs/mt/images/clientlibs/static/resources/mt-logo-top-01.svg" width="100" height="50" style="background-color:white;" alt="Metter Toledo Logo" /></a><span> Metter-Toledo Backend</p>
 
